@@ -23,6 +23,7 @@ model User {
   role  Role
   created_at DateTime @default(now())
   tokens UserToken[]
+  documents Document[]
 
   @@map("users")
 }
@@ -36,4 +37,15 @@ model UserToken {
   created_at DateTime @default(now())
 
   @@map("user_tokens")
+}
+
+model Document {
+  id String  @default(uuid()) @id
+  user User @relation(fields: [user_id], references: [id])
+  user_id  String
+  reference_date  DateTime
+  created_at DateTime @default(now())
+  document_url String
+
+  @@map("documents")
 }
