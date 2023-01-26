@@ -13,7 +13,7 @@ import { FileInterceptor } from '@nestjs/platform-express'
 import { diskStorage } from 'multer'
 import {
   fileDestinationHelper,
-  fileFilterHelper,
+  fileImageFilterHelper,
 } from '@/application/common/helpers'
 
 @Controller('users')
@@ -30,7 +30,7 @@ export class UpdateUserAvatarController {
         filename: fileDestinationHelper,
       }),
       limits: { fileSize: 10485760 },
-      fileFilter: fileFilterHelper,
+      fileFilter: fileImageFilterHelper,
     }),
   )
   async handle(

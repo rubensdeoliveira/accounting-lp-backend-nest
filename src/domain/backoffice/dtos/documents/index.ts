@@ -1,1 +1,1 @@
-export * from './create-document.dto'
+export * from './create-documents-in-bulk.dto'

@@ -1,1 +1,1 @@
-export * from './create-document.use-case'
+export * from './create-documents-in-bulk.use-case'

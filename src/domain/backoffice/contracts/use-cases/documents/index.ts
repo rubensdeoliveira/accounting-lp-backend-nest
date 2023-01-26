@@ -1,1 +1,1 @@
-export * from './create-session.use-case.contract'
+export * from './create-documents-in-bulk.use-case.contract'

@@ -1,7 +1,7 @@
 import { HttpException, HttpStatus } from '@nestjs/common'
 import { extname } from 'path'
 
-export const fileFilterHelper = (_: any, file: any, cb: any) => {
+export const fileImageFilterHelper = (_: any, file: any, cb: any) => {
   if (file.mimetype.match(/\/(png|jpg|jpeg|gif)$/)) {
     cb(null, true)
   } else {

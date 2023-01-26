@@ -8,12 +8,9 @@ export interface CreateDocumentRepositoryContract {
 
 export namespace CreateDocumentRepositoryContract {
   export type Input = {
-    email: string
-    name: string
-    last_name: string
-    phone: string
-    password: string
-    role: 'admin' | 'client'
+    user_id: string
+    reference_date: Date
+    document_url: string
   }
   export type Output = DocumentModel
 }
